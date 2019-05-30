@@ -4,6 +4,6 @@ first of all, thanks to the
 
 
 ## outline
-[1-basic](./1-basic.ipynb)
-[2-function](./2-function.ipynb)
-[3-OOC](./3-OOC.ipynb)
+[1-basic](./1-basic.ipynb)  
+[2-function](./2-function.ipynb)  
+[3-OOC](./3-OOC.ipynb)  
