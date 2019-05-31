@@ -4,6 +4,7 @@ first of all, thanks to the tutorial of
 本文档使用python3.7，在windows和OSX共同完成
 
 ## outline
-[1-basic](./1-basic.ipynb)  
-[2-function](./2-function.ipynb)  
-[3-OOC](./3-OOC.ipynb)  
+[01-BasicKnowledge](./01-BasicKnowledge.ipynb)  
+[02-BasicFunction](./02-BasicFunction.ipynb)  
+[03-FunctionalCoding](./03-FunctionalCoding.ipynb)  
+[04-OOC](./04-OOC.ipynb)  
