@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liftstatus>
+       <event lift="1" group="1" building="1" floor="3" deck="1" side="1" value="starting" servingDir="down" destFloor="1"/>
+</liftstatus>
+<?xml version="1.0" encoding="UTF-8"?>
+<liftservice>
+       <event lift="1" group="1" building="1" value="n"/>
+</liftservice>
+<?xml version="1.0" encoding="UTF-8"?>
+<liftstatus>
+       <event lift="1" group="1" building="1" floor="3" deck="1" side="1" value="closed" servingDir="down"/>
+</liftstatus>
