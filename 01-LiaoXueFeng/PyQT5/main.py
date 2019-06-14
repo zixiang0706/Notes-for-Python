@@ -1,8 +1,8 @@
 
 import time
 import threading,queue
-import asset.UI as UI
-import asset.interface as interface
+import UI
+import interface
 
 q=queue.Queue()
 t1=threading.Thread(target=UI.main,args=(q,))
