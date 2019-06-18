@@ -25,10 +25,12 @@
 
 ## 底部菜单栏 Log
 
-checkout revision可以把head 指定到这个位置
+1. checkout revision可以把head 指定到这个位置，效果和checkout一致
 
-![屏幕快照 2019-06-18 下午9.42.45](assets/屏幕快照 2019-06-18 下午9.42.45-0865462.png)
+![img](assets/img.png)
 
-add an test img
+2. 注意solve conflict的方式。
+   - accept theirs：选择老的
+   - accept yours： 选择新的
+3. 
 
-![test](assets/test.png)
