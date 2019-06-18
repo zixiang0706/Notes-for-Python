@@ -1,4 +1,4 @@
 #python3
 *_pycache_*
-*.png
+#*.png
 .pynb_ch*
