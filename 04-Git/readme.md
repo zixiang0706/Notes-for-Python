@@ -1,0 +1,10 @@
+# Git
+
+
+## gitignore
+
+# Pycharm+Git
+
+
+
+
