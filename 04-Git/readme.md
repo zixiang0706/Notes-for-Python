@@ -29,4 +29,6 @@ checkout revision可以把head 指定到这个位置
 
 ![屏幕快照 2019-06-18 下午9.42.45](assets/屏幕快照 2019-06-18 下午9.42.45-0865462.png)
 
+add an test img
 
+![test](assets/test.png)
