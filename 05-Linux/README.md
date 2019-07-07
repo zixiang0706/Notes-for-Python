@@ -12,6 +12,7 @@
 | cd       | cd ..                                                        | parent dictionary                                            |      |
 |          | cd ~                                                         | user                                                         |      |
 |          | cd /                                                         | root                                                         |      |
+|          | Cd -                                                         | 上一个路径                                                   |      |
 | ls       | ls -lh                                                       | 人性化显示                                                   |      |
 |          | ls -a                                                        | 显示隐藏文件                                                 |      |
 |          | ls -d                                                        | 当前这个目录                                                 |      |
@@ -41,6 +42,8 @@
 | tar      | tar -cvf archive.tar foo bar                                 | 创建一个归档                                                 |      |
 
 # VIM
+
+https://lxs647.iteye.com/blog/1245948
 
 VIM的三种模式是核心：
 
@@ -333,12 +336,43 @@ r-4 w-2 x-1 --0
 
 
 # 文件归档和压缩
+
+> **tar命令详解**
+>
+> -c: 建立压缩档案
+>
+> -x：解压
+>
+> -t：查看内容
+>
+> -r：向压缩归档文件末尾追加文件
+>
+> -u：更新原压缩包中的文件
+>
+> 这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。
+>
+> 下面的参数是根据需要在压缩或解压档案时可选的。
+>
+> -z：有gzip属性的
+>
+> -j：有bz2属性的
+>
+> -Z：有compress属性的
+>
+> -v：显示所有过程
+>
+> -O：将文件解开到标准输出
+>
+> 参数-f是必须的
+>
+> -f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。
+
 ## tar
-- `tar -cvf archive.tar foo bar` 创建一个归档
+
+- `tar -cf archive.tar foo bar` 创建一个归档
 - `tar -cf archive.tar foo bar`
-- `tar -cf archive.tar foo bar`
-- `tar -cfv archive.tar`解压一个归档	
-- `tar -cfv archive.tar -C [path]`解压一个归档到指定目录
+- `tar -xf archive.tar`解压一个归档	
+- `tar -xf archive.tar -C [path]`解压一个归档到指定目录
 - `du -sh [file]`显示文件的大小
 
 ## 压缩
@@ -348,11 +382,11 @@ r-4 w-2 x-1 --0
 ### gz
 
 - `tar -zcf archive.tar.gz foo bar` 创建一个压缩的归档
-- `tar -xvf archive.tar.gz -C [path]` 解压压缩的归档
+- `tar -xzf archive.tar.gz -C [path]` 解压压缩的归档
 
 ### bz2
 
-- `tar -jcvf archive.tar.bz2 foo bar` 创建一个压缩的归档
+- `tar -jcf archive.tar.bz2 foo bar` 创建一个压缩的归档
 - `tar -jxf archive.tar.bz2 -C [path]` 解压压缩的归档
 
 ### zip
@@ -538,4 +572,28 @@ Killall httpd 全部终止
 # disk
 
 ![屏幕快照 2019-06-25 下午4.14.53](assets/屏幕快照 2019-06-25 下午4.14.53.png)
+
+
+
+# 自动化脚本
+
+```bash
+#!/bin/bash
+case $1 in
+        *.tar.gz)
+                tar zxf $1
+        ;;
+        *.tar.bz2)
+                tar jxf $1
+        ;;
+esac
+```
+
+
+
+```bash
+(base) ➜  05-Linux git:(dev) ✗ sh -x untar.sh assets/tar/pic.tar.gz
++ case $1 in
++ tar zxf assets/tar/pic.tar.gz
+```
 
