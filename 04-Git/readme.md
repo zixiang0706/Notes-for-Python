@@ -21,6 +21,7 @@
 7. 查看所有分支`git branch -a`
 8. 删除本地分支`git branch -D dev2`
 9. 删除远程分支`git push origin --delete dev2`
+10. 最新提交合并到上一个commit `git commit --amend`
 
 # Pycharm+Git
 

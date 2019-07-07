@@ -5,6 +5,9 @@
 | 命令     | 举例                                                         | 作用                                                         | 补充 |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
 | who am i |                                                              | 显示用户名字                                                 |      |
+| Which    | which ls                                                     | 查看命令是否存在                                             |      |
+| Whereis  |                                                              | 类似which                                                    |      |
+| Locate   | Locate [file]                                                | 比较详细的显示                                               |      |
 | pwd      |                                                              | 显示当前路径                                                 |      |
 | cd       | cd ..                                                        | parent dictionary                                            |      |
 |          | cd ~                                                         | user                                                         |      |
@@ -112,6 +115,15 @@ VIM的三种模式是核心：
 - 复制 yy
 - 粘贴 p
 - 复制多行 2yy 
+
+## search
+
+在命令模式下
+
+1. 输入/
+2. 输入字符
+3. 输入回车
+4. 按下n，显示下一个
 
 
 
@@ -325,4 +337,205 @@ r-4 w-2 x-1 --0
 - `tar -cvf archive.tar foo bar` 创建一个归档
 - `tar -cf archive.tar foo bar`
 - `tar -cf archive.tar foo bar`
+- `tar -cfv archive.tar`解压一个归档	
+- `tar -cfv archive.tar -C [path]`解压一个归档到指定目录
+- `du -sh [file]`显示文件的大小
+
+## 压缩
+
+格式有gz，bz2，xz，zip，z
+
+### gz
+
+- `tar -zcf archive.tar.gz foo bar` 创建一个压缩的归档
+- `tar -xvf archive.tar.gz -C [path]` 解压压缩的归档
+
+### bz2
+
+- `tar -jcvf archive.tar.bz2 foo bar` 创建一个压缩的归档
+- `tar -jxf archive.tar.bz2 -C [path]` 解压压缩的归档
+
+### zip
+
+- `zip -r a.zip [path]`
+- `unzip a.zip -d [path]`
+
+## file
+
+- file [1.txt]: 确定文件类型
+
+
+
+# 软件包管理
+
+RPM软件包管理 redhat program manager
+
+-i install
+
+—nodeps 不需要依赖
+
+-v verbose 详细信息
+
+-h —hash 哈希进度条
+
+`rpm -ivh [name.rpm]` install
+
+`rpm -Uvh [name.rpm]` update
+
+`rpm -e [zsh]` eliminate 
+
+`rpm -e [zsh] --nodeps` eliminate, ignore dependence 
+
+Rpmfind.net 网上下载安装包
+
+rpm -qa [zsh] 查看是否安装
+
+`rpm -qf  which zsh`查看是否安装
+
+## 恢复文件
+
+cpio通过重新定向的方式，将文件打包。可以解压`.cpio .tar`
+
+## 创建本地yum仓库
+
+Yum -y install http
+
+Yum check-update
+
+Yum remove
+
+yum info
+
+yum list
+
+Yum groupinstall 'security tool'
+
+## 源码包
+
+源码编译安装，比较灵活
+
+### 解压
+
+tar -xzf [file]
+
+- x 解包
+- z 解压gzip。 j用于bz2
+- v 显示过程verbose
+- f 指定被解压的包名字
+- C 指定解压的目录
+
+### 配置
+
+1. 进入目录
+2. 用./configure [—prefix=/usr/local/filname]来配置。卸载的时候删除这个目录
+3. make -j 4 编译，4核
+4. Make install安装
+
+
+
+# 文件输入/输出/重定向
+
+linux一切都是文件，drive也是文件，键盘也是文件。
+
+重定向：改变文件的输入输出方向
+
+文件描述符：
+
+- ulimit -n
+- 0 stdin 
+- 1 stdout
+- 2 stderr
+- 举例：echo 123456 | passwd —stdin test
+
+## 重定向
+
+- 1> 重定向输出 覆盖  写到文本里
+- \>>                    追加
+- 0< 重定向输入 覆盖 不从键盘读，从文本读
+- &: 1>>a.txt 2>>&1  1/2的输出，都放进a.txt
+- 混合输出： &>a.txt  不分正确还是错误，都放进a.txt
+
+## 错误重定向
+
+- 2> 只把2类型，也就是错误，重新定向到文件
+- 2>> 追加
+
+## 黑洞
+
+- /dev/null 放什么进入都不会显示
+
+## 管道
+
+| 把两条命令结合在一起
+
+grep 查找信息
+
+- ls | grep line1
+- Grep line1 a.txt
+- -i 忽略大小写
+- v 反转
+- ^xx 以xx开头
+- 'xx$' 以x结尾
+- ^$ 空行 Grep -v ^\$ a.txt
+
+tee 读取标准输入，然后输出到文件。是标准输入，读取不到错误的
+
+- who | tee a.txt
+- who | tee -a a.txt 追加
+
+# find
+
+find [path] -option [-print]
+
+find . -name '*.txt' -print  当前目录查找所有名字有txt
+
+find . -perm 755 -print  安装权限查找
+
+
+
+![屏幕快照 2019-06-25 上午10.56.44](assets/屏幕快照 2019-06-25 上午10.56.44.png)
+
+![屏幕快照 2019-06-25 上午10.55.25](assets/屏幕快照 2019-06-25 上午10.55.25.png)
+
+# process
+
+program: inactivate 
+
+process: activate, private variable
+
+threading: shared variable 
+
+Ps aux
+
+Ps -fe
+
+Top
+
+top -p [num]
+
+Pgrep [name]
+
+Netstat -anlpt
+
+Netstat -anlpt | grep httpd
+
+fg qianta
+
+bg
+
+jobs
+
+& 后台运行
+
+Kill -9 终止
+
+kill -s 9  强制终止
+
+Killall httpd 全部终止
+
+
+
+# disk
+
+![屏幕快照 2019-06-25 下午4.14.53](assets/屏幕快照 2019-06-25 下午4.14.53.png)
 
