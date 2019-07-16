@@ -248,5 +248,30 @@ else
 fi
 ```
 
+### multiple branch
 
+```bash
+#!/bin/bash
+#
 
+read -p "Please enter a num: " NUM
+echo "you entered is: $NUM"
+
+if [ $NUM -gt 85 ] && [ $NUM -le 100 ]
+then
+    echo "bigger than 85"
+elif [ $NUM -gt 65 ] && [ $NUM -le 85 ]
+then
+    echo "bigger than 65"
+else
+    echo "less than 65"
+fi
+```
+
+### monitor HTTP
+
+![123](assets/123-3197165.png)
+
+### install
+
+rpm -q httpd

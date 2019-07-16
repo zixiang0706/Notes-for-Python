@@ -11,6 +11,7 @@
 1. 修改了文件，已经add了，删除add`git reset .`
 2. 丢弃修改`git checkout .`
 3. 回复到最新一次的HEAD`git reset HEAD`
+4. 查看head id `git log`
 4. 回复到指定的head`git checkout [headID]`
 5. 软硬复位head
    - `git reset --hard [HASH] ` 有可能会丢失head
