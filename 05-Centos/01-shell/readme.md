@@ -274,8 +274,76 @@ fi
 
 ### monitor HTTP
 
+requirment :
+
 ![123](assets/123-3197165.png)
 
-### install
+![1234](assets/1234.png)
 
-rpm -q httpd
+installation:
+
+`rpm -q httpd`
+
+`rpm -y install httpd`
+
+```bash
+#!/bin/bash
+#
+
+systemctl status httpd >> /dev/null
+if [ $? -eq 0 ]
+then
+    echo "Http is running"
+elif [ $? -ne 0 ]
+then
+    echo "Http is stop! try to restart" >> /var/log/httperr.log
+    read -p "restart?[y/n]" DO
+    echo "  Your input is: $DO"
+    if [ $DO == y ]
+    then
+        echo " restarting"
+        systemctl restart httpd
+    elif [ $DO == n ]
+    then
+        echo " script stop"
+    else
+        echo "wrong input"
+    fi
+fi
+```
+
+### maintenance command
+
+`ls` show the files in the directory 
+
+​	`-a` show the hidden file 
+
+​	`-d` only show directory
+
+`pwd` print work directory
+
+`cd` change directory
+
+​	`-` last dir
+
+​	`..` parent dir
+
+`date` show or set current time
+
+​	`"+%Y-%m-%d %H:%M:%S"`	show
+
+​	` -s` set `date -s "2022-10-09 20:22"`
+
+`passwd` change password
+
+`su` change user, default is root
+
+​	`su - pi` change to user pi
+
+`clear` clean the output of shell
+
+`man` show the help doc
+
+​	`man vim` detailed info
+
+​	`vim --help` rough info
