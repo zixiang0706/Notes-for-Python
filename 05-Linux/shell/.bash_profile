@@ -19,8 +19,17 @@ alias sysoff='sudo shutdown -s -t 0'
 alias sysre='sudo shutdown -r -t 0'
 
 alias host='code /c/Windows/System32/drivers/etc/hosts'
-alias pi='ssh pi@10.69.106.136'
+
 alias ali="ssh root@47.96.174.116"
+alias to-ali="scp -rp ~/share root@47.96.174.116:~/"
+alias from-ali="scp -rp root@47.96.174.116:~/share ~/"
+
+alias pi='ssh pi@10.69.106.136'
+alias to-pi="scp -rp ~/share pi@10.69.106.136:~/ "
+alias from-pi="scp -rp pi@10.69.106.136:~/share  ~/"
+
 alias knowhosts="vim /c/Users/chuandr/.ssh/known_hosts"
+
 #export PS1="\[\e[31m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\] - \[\e[35m\]\w\[\e[m\] "
- 
+
+alias ls="ls -Glha --color=auto"
