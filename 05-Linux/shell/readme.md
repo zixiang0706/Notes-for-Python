@@ -120,6 +120,9 @@
   > source ~/.bash_profile
   > alias typo="open -a typora"
 
+## edit gitbash
+https://juejin.im/post/5bd5a08cf265da0add520772#heading-5
+
 ## 5 ways to excute sh script 
 
 ![123](assets/123.png)
