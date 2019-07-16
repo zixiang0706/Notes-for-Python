@@ -18,7 +18,7 @@ set termencoding=utf-8
 set fileformat=unix
 set encoding=utf-8
 " 配色方案
-colorscheme desert
+colorscheme elflord
 " 指定配色方案是256色
 set t_Co=256
 
@@ -87,13 +87,15 @@ set cursorline
 set cursorcolumn
 "设置光标样式为竖线vertical bar
 " Change cursor shape between insert and normal mode in iTerm2.app
-"if $TERM_PROGRAM =~ "iTerm"
-let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
-let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-"endif
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
 " 共享剪贴板
 set clipboard+=unnamed
 " 文件被改动时自动载入
 set autoread
 " 顶部底部保持3行距离
 set scrolloff=3
+
+
