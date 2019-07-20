@@ -312,7 +312,7 @@ then
 fi
 ```
 
-### maintenance command
+## maintenance command
 
 `ls` show the files in the directory 
 
@@ -347,3 +347,160 @@ fi
 ​	`man vim` detailed info
 
 ​	`vim --help` rough info
+
+`who` who logging in the system	
+
+```bash
+root@zixiang0706 - ~ who
+root     pts/0        2019-07-17 21:13 (211.161.245.217)
+name     which terminal  time           ip       
+```
+
+`w`
+
+```
+root@zixiang0706 - ~ w
+ 21:16:38 up 1 day,  5:03,  2 users,  load average: 0.00, 0.01, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+root     pts/0    211.161.245.217  21:13    3:18   0.00s  0.00s -bash
+root     pts/1    211.161.245.217  21:16    6.00s  0.00s  0.00s w
+```
+
+`uname`
+
+`uptime`
+
+`last`
+
+`dmesg`
+
+`free`
+
+`ps`
+
+​	`-a`  process of all user
+
+​	`-x` process of all system
+
+​	`-u` time and name of user
+
+​	`-f` detailed path of process
+
+​	`-c` only show the name of process 
+
+​	`ps aux |grep mosquitto` or  `ps fe |grep mosquitto` normal usage
+
+`top`
+
+​	`-d` specify the interval of screen refresh  
+
+​	`-i` filter the zombine process
+
+​	`-c` show the path of process
+
+​	`-s` run in safe mode
+
+​	`-b` splite the screen
+
+```bash
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+  936 root      10 -10  127328  11964   9276 S  0.7  1.2  11:17.17 AliYunDun
+  
+```
+
+​	short cut:
+
+​		i: filter idle
+
+​		m: show memory
+
+​		c: sort by cpu load
+
+## for
+
+```bash
+for i in $(cat num)
+do
+    echo $i
+done
+```
+
+
+
+```bash
+USER=$(cat file)
+echo $USER
+for i in $USER
+do
+    echo "find: $i"
+done	
+```
+
+
+
+```bash
+cat /etc/passwd |awk -F : '{print $1}'
+echo $?
+```
+
+```bash
+ip=$(cat file)
+for i in $ip
+do
+    ping -c 2 -i 0.2 > /dev/null
+    if [$? -eq 0]
+    then
+        echo "$i host is up"
+    else
+        echo "$i host is down"
+    fi
+done
+```
+
+## while
+
+```bash
+user="stu"
+i=1
+
+while [ $i -le 20]
+do
+    useradd ${user}$i
+    echo "123456" | passwd --stdin ${user}$i >>/dev/null
+    let i++
+done
+```
+
+
+
+### template
+
+```bash
+price=$(expr $RANDOM % 1000)
+time=0
+
+echo "guess price between 1000-0:"
+
+while true
+do
+    read -p "please enter your price:" INT
+    echo "your input is $INT"
+    let time++
+    if [ $INT -eq $price ]
+    then
+        echo "good you are right"
+        echo "the times you used: $time"
+        exit 0
+    elif [ $INT -gt $price ]
+    then
+        echo "too big"
+    else
+        echo "too small"
+    fi
+done
+```
+
+
+
+
+
