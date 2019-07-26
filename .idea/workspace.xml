@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="834149d0-d7b0-486f-9c0d-b2ac776141f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case08-layout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case09-dialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case10-widget-calendar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case10-widget-checkbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case10-widget-progress.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case10-widget-pushbutton.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case10-widget-slider.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case99-matplotlib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/case99-matplotlib2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-PyQt5/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-PySide2/01-initial/dialog.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-PySide2/01-initial/my-resource.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-PySide2/02-word/mainwindow.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-PySide2/02-word/myApp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-PySide2/02-word/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.a.txt.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Notes-for-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Notes-for-Python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draft.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,33 +23,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/07-PySide2/02-word/myApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="22" />
+            <state relative-caret-position="439">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-PySide2/02-word/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
+            <state relative-caret-position="95">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tool</find>
       <find>lcdNumber</find>
+      <find>label</find>
+      <find>radio</find>
+      <find>exit</find>
+      <find>plain</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -62,9 +69,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py" />
         <option value="$PROJECT_DIR$/07-PySide2/01-initial/dialog.py" />
         <option value="$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.py" />
+        <option value="$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py" />
+        <option value="$PROJECT_DIR$/07-PySide2/02-word/myApp.py" />
+        <option value="$PROJECT_DIR$/07-PySide2/02-word/test.py" />
       </list>
     </option>
   </component>
@@ -73,6 +82,9 @@
     <option name="y" value="-1057" />
     <option name="width" value="1568" />
     <option name="height" value="980" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -96,7 +108,7 @@
               <item name="Notes-for-Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Notes-for-Python" type="462c0819:PsiDirectoryNode" />
               <item name="07-PySide2" type="462c0819:PsiDirectoryNode" />
-              <item name="01-initial" type="462c0819:PsiDirectoryNode" />
+              <item name="02-word" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -121,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.myApp">
     <configuration name="MyApp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Notes-for-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,8 +155,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="myApp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Notes-for-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07-PySide2/02-word" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07-PySide2/02-word/myApp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Notes-for-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07-PySide2/02-word" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07-PySide2/02-word/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.myApp" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.MyApp" />
       </list>
     </recent_temporary>
@@ -166,18 +222,18 @@
     <frame x="211" y="-1057" width="1568" height="980" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17776342" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17776342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49954668" visible="true" weight="0.32995495" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49954668" weight="0.32995495" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5004533" side_tool="true" weight="0.32995495" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -207,20 +263,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/07-PySide2/01-initial/下载.jpeg" />
+    <entry file="file://$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/07-PySide2/01-initial/MyApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="22" />
+        <state relative-caret-position="172">
+          <caret line="49" column="38" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="38" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/07-PySide2/01-initial/mainwindow.py">
+    <entry file="file://$PROJECT_DIR$/07-PySide2/02-word/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="121" column="49" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
+        <state relative-caret-position="95">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-PySide2/02-word/myApp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

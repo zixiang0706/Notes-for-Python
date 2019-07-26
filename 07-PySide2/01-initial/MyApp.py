@@ -1,5 +1,7 @@
-from PySide2 import QtWidgets
+from PySide2 import QtWidgets, QtGui, QtCore
 import mainwindow, dialog
+import webbrowser
+import time
 
 
 class Dialog(dialog.Ui_Dialog,QtWidgets.QDialog):
@@ -7,6 +9,7 @@ class Dialog(dialog.Ui_Dialog,QtWidgets.QDialog):
         super(Dialog,self).__init__()
         self.setupUi(self)
         self.toolButton_2.clicked.connect(self.age)
+
 
     def age(self):
         answer, status = QtWidgets.QInputDialog.getInt(self,'title','hint',28, 1, 120)
@@ -32,6 +35,12 @@ class MyQtApp(mainwindow.Ui_MainWindow,QtWidgets.QMainWindow):
 
         self.pushButton_6.clicked.connect(self.dialog)
         self.pushButton_5.clicked.connect(self.user_dialog)
+
+        self.label_5.mousePressEvent = self.click
+
+        self.actioncontact_us.triggered.connect(self.contactUs)
+        self.actionexit.triggered.connect(self.userExit())
+        time.sleep(0.5)
 
 
     def changeText(self,e):
@@ -83,9 +92,26 @@ class MyQtApp(mainwindow.Ui_MainWindow,QtWidgets.QMainWindow):
         self.user_dialog_app = Dialog()
         self.user_dialog_app.exec_()
 
+    def click(self, e):
+        webbrowser.open('https://www.baidu.com')
+        print('pic is pressed')
+
+
+    def contactUs(self):
+        print('contact us is clicked')
+
+    def userExit(self):
+        self.close()
+        print('close')
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication()
+    splash = QtWidgets.QSplashScreen(QtGui.QPixmap('asset/andrew.png'))
+    splash.show()
+    splash.showMessage("loading1 ...",QtCore.Qt.AlignCenter,QtCore.Qt.red)
+    app.processEvents()
     qt_app = MyQtApp()
     qt_app.show()
+    splash.finish(qt_app)
     app.exec_()
