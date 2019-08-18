@@ -8,3 +8,6 @@ first of all, thanks to the tutorial of
 [02-BasicFunction](./02-BasicFunction.ipynb)  
 [03-FunctionalCoding](./03-FunctionalCoding.ipynb)  
 [04-OOC](./04-OOC.ipynb)  
+
+## tools
+this doc is editted by jupyter notebook with jupyterthemes. and the configure is list `jt -t onedork -f roboto -fs 14 -nfs 14 -tfs 14 -ofs 11`
