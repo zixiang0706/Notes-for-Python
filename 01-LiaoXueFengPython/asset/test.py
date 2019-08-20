@@ -1,50 +1,43 @@
-import unittest
+from email.parser import Parser
+from email.header import decode_header
+from email.utils import parseaddr
 
+import poplib
 
-class Dict(dict):
+# 输入邮件地址, 口令和POP3服务器地址:
+email = "zixiang0706@163.com"
+password = "zi0706224"
+pop3_server = 'pop3.163.com'
 
-    def __init__(self, **kw):
-        super().__init__(**kw)
+# 连接到POP3服务器:
+server = poplib.POP3(pop3_server)
+# 可以打开或关闭调试信息:
+server.set_debuglevel(1)
+# 可选:打印POP3服务器的欢迎文字:
+print(server.getwelcome().decode('utf-8'))
 
-    def __getattr__(self, key):
-        try:
-            return self[key]
-        except KeyError:
-            raise AttributeError(r"'Dict' object has no attribute '%s'" % key)
+# 身份认证:
+server.user(email)
+server.pass_(password)
 
-    def __setattr__(self, key, value):
-        self[key] = value
+# stat()返回邮件数量和占用空间:
+print('Messages: %s. Size: %s' % server.stat())
+# list()返回所有邮件的编号:
+resp, mails, octets = server.list()
+# 可以查看返回的列表类似[b'1 82923', b'2 2184', ...]
+print(mails)
 
+# 获取最新一封邮件, 注意索引号从1开始:
+index = len(mails)
+resp, lines, octets = server.retr(index)
 
-class TestDict(unittest.TestCase):
+# lines存储了邮件的原始文本的每一行,
+# 可以获得整个邮件的原始文本:
+msg_content = b'\r\n'.join(lines).decode('utf-8')
+# 稍后解析出邮件:
+msg = Parser().parsestr(msg_content)
 
-    def test_init(self):
-        d = Dict(a=1, b='test')
-        self.assertEqual(d.a, 1)
-        self.assertEqual(d.b, 'test')
-        self.assertTrue(isinstance(d, dict))
-
-    def test_key(self):
-        d = Dict()
-        d['key'] = 'value'
-        self.assertEqual(d.key, 'value')
-
-    def test_attr(self):
-        d = Dict()
-        d.key = 'value'
-        self.assertTrue('key' in d)
-        self.assertEqual(d['key'], 'value')
-
-    def test_keyerror(self):
-        d = Dict()
-        with self.assertRaises(KeyError):
-            value = d['empty']
-
-    def test_attrerror(self):
-        d = Dict()
-        with self.assertRaises(AttributeError):
-            value = d.empty
-
-
-if __name__ == '__main__':
-    unittest.main()
+# 可以根据邮件索引号直接从服务器删除邮件:
+# server.dele(index)
+# 关闭连接:
+server.quit()
