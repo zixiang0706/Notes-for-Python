@@ -1,7 +1,9 @@
-# Git
+﻿# Git
 
 ## 链接dev和origin/dev
-
+`git remote add origin https://github.com/zixiang0706/Digital-Figure-Reco.git`
+`git push -u origin master`
+`git push --set-upstream origin master --force`
 ## gitignore
 
 ## use case
@@ -23,6 +25,7 @@
 8. 删除本地分支`git branch -D dev2`
 9. 删除远程分支`git push origin --delete dev2`
 10. 最新提交合并到上一个commit `git commit --amend`
+11. force push  `git push -f`
 
 # Pycharm+Git
 
@@ -37,4 +40,5 @@
    - accept theirs：选择老的
    - accept yours： 选择新的
 3. 
+生成requirements：`pipreqs --force ./ --encoding==utf8`
 
