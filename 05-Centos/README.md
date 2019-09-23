@@ -444,3 +444,9 @@ esac
 + tar zxf assets/tar/pic.tar.gz
 ```
 
+## Mac 灰色文件
+
+```bash
+xattr -r -d com.apple.FinderInfo <path>
+```
+
