@@ -7,7 +7,7 @@ import warnings
 import numpy as np
 
 warnings.simplefilter(action="ignore", category=RuntimeWarning)
-# sns.set(rc={'axes.facecolor':'cornflowerblue', 'figure.facecolor':'cornflowerblue'})
+sns.set(rc={'axes.facecolor':'cornflowerblue', 'figure.facecolor':'gray'})
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 # pd.set_option('display.max_rows', 1000)  # 最多显示行数.
 # pd.set_option('precision', 6)  # 浮点数的精度
@@ -20,7 +20,7 @@ THRESHOLD = 0.5
 COMPARE_TIME = 1
 MODE = {0: 'fluc_pct',
         1: 'fluc_cumsum',
-        2: 'margin'}[2]
+        2: 'margin'}[0]
 
 # read data
 df = pd.read_csv('./asset/binance_btc_1min_2019.csv')
